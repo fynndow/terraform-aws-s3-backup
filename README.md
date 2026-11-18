@@ -98,7 +98,7 @@ aws backup start-backup-job \
 
 On-demand backup jobs do not use the retention rule of the backup plan. Without `--lifecycle`, the recovery point is kept forever. The first backup of a bucket can take up to an hour, even for small files.
 
-A completed on-demand backup of the example bucket:
+The backup vault with a recovery point after a test run of the example:
 
 ![Completed AWS Backup job for the S3 bucket](docs/recovery-point.png)
 
