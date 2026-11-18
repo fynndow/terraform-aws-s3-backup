@@ -42,3 +42,15 @@ terraform.rc
 # Optional: ignore plan files saved before destroying Terraform configuration
 # Uncomment the line below if you want to ignore planout files.
 # planout
+# Lock file only for the example, not for the reusable module
+modules/**/.terraform.lock.hcl
+
+# Saved plan files
+*tfplan*
+
+# Never commit AWS credentials
+*.csv
+.aws/
+
+# Local test files
+test.txt
