@@ -1,4 +1,4 @@
-![terraform](https://github.com/fynndow/terraform-aws-s3-backup/actions/workflows/terraform.yml/badge.svg)
+[![terraform](https://github.com/fynndow/terraform-aws-s3-backup/actions/workflows/terraform.yml/badge.svg)](https://github.com/fynndow/terraform-aws-s3-backup/actions/workflows/terraform.yml)
 
 # terraform-aws-s3-backup
 
@@ -15,7 +15,7 @@ Versioned, encrypted S3 backup bucket with daily AWS Backup, in one reusable Ter
 
 ```hcl
 module "s3_backup" {
-  source = "github.com/fynndow/terraform-aws-s3-backup//modules/s3-backup"
+  source = "github.com/fynndow/terraform-aws-s3-backup//modules/s3-backup?ref=v1.0.0"
 
   bucket_name           = "my-company-backups"
   backup_retention_days = 35
@@ -75,6 +75,8 @@ The tests check that:
 Every push runs `terraform fmt`, `tflint`, `terraform validate` and the tests in GitHub Actions.
 
 ## Try it out
+
+The commands below run in `examples/basic` and use the outputs defined there.
 
 ```bash
 cd examples/basic
